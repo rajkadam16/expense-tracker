@@ -1,0 +1,55 @@
+<section class="min-h-screen w-full flex flex-col">
+  <!-- Top Navbar -->
+  <nav class="h-[10vh] bg-[#061B09] shadow-md px-6 flex items-center justify-center">
+    <div class="flex-col items-center justify-center space-x-4">
+      <img src="logo.png" alt="Home Icon" class="h-15 w-auto">
+    </div>
+  </nav>
+
+  <!-- Main Wrapper: Sidebar + Content -->
+  <div class="flex flex-1 overflow-hidden">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-[#061B09] shadow-md p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <h2 class="text-lg font-semibold text-white mb-6">Dashboard</h2>
+        <ul class="space-y-4 text-white font-medium">
+          <li>
+            <a routerLink="/overview/expense-tracker" class="flex items-center hover:text-blue-600 transition">
+              🏠 <span class="ml-2">Expense Tracker</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/overview/statistics" class="flex items-center hover:text-blue-600 transition">
+              📅 <span class="ml-2">Statistics</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/overview/blog" class="flex items-center hover:text-blue-600 transition">
+              💰 <span class="ml-2">Blogs</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/overview/review" class="flex items-center hover:text-blue-600 transition">
+              ⭐ <span class="ml-2">Reviews</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="w-full text-left text-red-600 font-semibold hover:text-red-700 transition">
+          🚪 Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 overflow-y-auto bg-[#06271F]">
+      <div class="max-w-7xl mx-auto">
+        <!-- Placeholder router outlet -->
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>
+</section>

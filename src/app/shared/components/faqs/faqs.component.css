@@ -1,0 +1,30 @@
+.accordion .accordion-item {
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.accordion .accordion-header {
+  padding: 0;
+
+  button {
+    padding: 1.2rem;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.accordion .accordion-body {
+  padding: 1rem;
+}
+
+.collapse {
+  transition: max-height 0.55s, opacity 0.35s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  display: block !important;
+}
+
+.collapse.show {
+  max-height: 100rem;
+  opacity: 1;
+}

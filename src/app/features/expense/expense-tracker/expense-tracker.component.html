@@ -1,0 +1,117 @@
+<section class="max-w-7xl mx-auto p-6 text-white">
+<!-- Toolbar: Search + Filters -->
+<div class="bg-[#075239] shadow-md rounded-lg p-4 mb-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-white">
+    <!-- Search Field -->
+    <input
+      type="search"
+      
+      placeholder="Search by transactions..."
+      class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-black text-sm"
+    />
+
+    <!-- Filter Dropdown 1 -->
+    <select
+      class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-black text-sm"
+    >
+      <option value="all">All types</option>
+      <option value="food">Food</option>
+      <option value="transport">Transport</option>
+      <option value="utilities">Utilities</option>
+      <option value="entertainment">Entertainment</option>
+      <option value="shopping">Shopping</option>
+    </select>
+
+    <!-- Filter Dropdown 2 -->
+    <select
+      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
+    >
+      <option value="all">All categories</option>
+      <option value="daily">Daily</option>
+      <option value="monthly">Monthly</option>
+      <option value="yearly">Yearly</option>
+    </select>
+
+    <!-- Filter Dropdown 3 -->
+    <select
+      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
+    >
+      <option value="all">All statuses</option>
+      <option value="completed">Completed</option>
+      <option value="pending">Pending</option>
+      <option value="failed">Failed</option>
+    </select>
+  </div>
+</div>
+
+    <!-- Toolbar: Search + Export -->
+  <div class="flex flex-col bg-[#075239] shadow-md rounded-lg md:flex-row md:items-center justify-between gap-4 mb-6">
+    <!-- Search -->
+    <div class="md:w-1/3 p-4 ">
+    <button class="ml-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Add Transactions</button>
+    <button class="ml-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Export</button>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="overflow-x-auto bg-[#075239] shadow-md rounded-lg">
+    <table class="min-w-full text-sm text-left ">
+      <thead class="bg-[#075239]  font-semibold">
+        <tr>
+          <th class="p-4 w-10">
+          </th>
+          <th class="p-4">Category</th>
+          <th class="p-4">Note</th>
+          <th class="p-4">Ref Number</th>
+          <th class="p-4">Wallet</th>
+          <th class="p-4">Amount</th>
+          <th class="p-4">Date</th>
+          <th class="p-4">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200">
+        <tr class="hover:bg-gray-50">
+          <td class="p-4">
+          </td>
+          <td class="p-4">Raj Kadam</td>
+          <td class="p-4">rajexample.com</td>
+          <td class="p-4">Admin</td>
+          <td class="p-4">
+            <span class="inline-block px-3 py-1 text-xs rounded-full bg-green-100 text-green-700">Active</span>
+          </td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4">
+          </td>
+          <td class="p-4">Jane Doe</td>
+          <td class="p-4">janeexample.com</td>
+          <td class="p-4">Editor</td>
+          <td class="p-4">
+            <span class="inline-block px-3 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">Pending</span>
+          </td>
+        </tr>
+        <tr class="hover:bg-gray-50">
+          <td class="p-4">
+          </td>
+          <td class="p-4">John Smith</td>
+          <td class="p-4">johnexample.com</td>
+          <td class="p-4">Viewer</td>
+          <td class="p-4">
+            <span class="inline-block px-3 py-1 text-xs rounded-full bg-red-100 text-red-700">Inactive</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <div class="mt-6 flex justify-center">
+    <nav class="inline-flex items-center space-x-1 text-sm">
+      <a href="#" class="px-3 py-1 rounded border border-gray-300 hover:bg-gray-100">&laquo;</a>
+      <a href="#" class="px-3 py-1 rounded border border-gray-300 bg-green-500 text-white">1</a>
+      <a href="#" class="px-3 py-1 rounded border border-gray-300 hover:bg-gray-100">2</a>
+      <a href="#" class="px-3 py-1 rounded border border-gray-300 hover:bg-gray-100">3</a>
+      <a href="#" class="px-3 py-1 rounded border border-gray-300 hover:bg-gray-100">&raquo;</a>
+    </nav>
+  </div>
+</section>
