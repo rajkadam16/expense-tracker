@@ -1,55 +1,63 @@
-<section class="min-h-screen w-full flex flex-col">
+<section class="min-h-screen w-full flex flex-col bg-[#041710] text-white font-sans">
   <!-- Top Navbar -->
-  <nav class="h-[10vh] bg-[#061B09] shadow-md px-6 flex items-center justify-center">
-    <div class="flex-col items-center justify-center space-x-4">
-      <img src="logo.png" alt="Home Icon" class="h-15 w-auto">
-    </div>
+  <nav class="h-[10vh] bg-[#03130D] shadow-md px-6 flex items-center justify-center">
+    <img src="logo.png" alt="Logo" class="h-12 w-auto" />
   </nav>
 
-  <!-- Main Wrapper: Sidebar + Content -->
+  <!-- Main Wrapper -->
   <div class="flex flex-1 overflow-hidden">
+    
     <!-- Sidebar -->
-    <aside class="w-64 bg-[#061B09] shadow-md p-6 flex flex-col justify-between overflow-y-auto">
+    <aside class="w-64 bg-[#03130D] shadow-lg p-6 flex flex-col justify-between overflow-y-auto">
+      <!-- Navigation Links -->
       <div>
-        <h2 class="text-lg font-semibold text-white mb-6">Dashboard</h2>
-        <ul class="space-y-4 text-white font-medium">
+        <h2 class="text-xl font-semibold mb-6 text-green-400 tracking-wide">Dashboard</h2>
+        <ul class="space-y-4">
           <li>
-            <a routerLink="/overview/expense-tracker" class="flex items-center hover:text-blue-600 transition">
-              🏠 <span class="ml-2">Expense Tracker</span>
+            <a routerLink="/overview/expense-tracker"
+               class="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-all duration-200">
+              🏠 <span>Expense Tracker</span>
             </a>
           </li>
           <li>
-            <a routerLink="/overview/statistics" class="flex items-center hover:text-blue-600 transition">
-              📅 <span class="ml-2">Statistics</span>
+            <a routerLink="/overview/statistics"
+               class="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-all duration-200">
+              📊 <span>Statistics</span>
             </a>
           </li>
           <li>
-            <a routerLink="/overview/blog" class="flex items-center hover:text-blue-600 transition">
-              💰 <span class="ml-2">Blogs</span>
+            <a routerLink="/overview/blog"
+               class="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-all duration-200">
+              📝 <span>Blogs</span>
             </a>
           </li>
           <li>
-            <a routerLink="/overview/review" class="flex items-center hover:text-blue-600 transition">
-              ⭐ <span class="ml-2">Reviews</span>
+            <a routerLink="/overview/review"
+               class="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-all duration-200">
+              ⭐ <span>Reviews</span>
             </a>
           </li>
         </ul>
       </div>
-      <div>
-        <button
-          type="button"
-          class="w-full text-left text-red-600 font-semibold hover:text-red-700 transition">
-          🚪 Logout
+
+      <!-- Logout Button -->
+      <div class="pt-6 border-t border-gray-700">
+        <button type="button"
+                class="flex items-center gap-2 w-full text-left text-red-500 hover:text-red-600 font-medium transition-all duration-200">
+          🚪 <span>Logout</span>
         </button>
       </div>
     </aside>
 
     <!-- Main Content -->
-    <main class="flex-1 p-6 overflow-y-auto bg-[#06271F]">
+    <main class="flex-1 bg-[#06271F] p-6 overflow-y-auto">
       <div class="max-w-7xl mx-auto">
-        <!-- Placeholder router outlet -->
         <router-outlet></router-outlet>
       </div>
     </main>
+
   </div>
 </section>
+
+
+

@@ -1,1 +1,53 @@
-<p>statistics works!</p>
+<!-- Toolbar: Title + Actions -->
+<div class="flex flex-col sm:flex-row justify-between items-center bg-[#075239] shadow-md rounded-lg px-6 py-4 mb-6 gap-4">
+  <h2 class="text-lg font-semibold text-white">Expense Statistics</h2>
+  <div class="flex gap-3">
+    <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition">Add Statistic</button>
+    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition">Export</button>
+  </div>
+</div>
+
+<!-- Chart Container -->
+<div class="bg-[#075239] shadow-md rounded-lg p-6 mb-6">
+  <div class="relative h-[300px] w-full">
+    <canvas baseChart
+            [data]="chartData"
+            [options]="chartOptions"
+            [type]="chartType">
+    </canvas>
+  </div>
+</div>
+
+<!-- Filters Section -->
+<div class="flex flex-col sm:flex-row justify-between items-center bg-[#075239] shadow-md rounded-lg px-6 py-4 mb-6 gap-4">
+  <input
+    type="search"
+    placeholder="Search statistics..."
+    class="w-full sm:w-1/4 px-4 py-2 rounded-md border border-green-600 bg-white text-black focus:outline-none focus:ring-2 focus:ring-green-400 text-sm" />
+
+  <select title="Filter by type" 
+    class="w-full sm:w-1/4 px-4 py-2 rounded-md border border-green-600 bg-white text-black focus:outline-none focus:ring-2 focus:ring-green-400 text-sm">
+    <option>All types</option>
+    <option>Food</option>
+    <option>Transport</option>
+    <option>Utilities</option>
+    <option>Entertainment</option>
+    <option>Shopping</option>
+  </select>
+
+  <select title="Filter by categories"
+    class="w-full sm:w-1/4 px-4 py-2 rounded-md border border-green-600 bg-white text-black focus:outline-none focus:ring-2 focus:ring-green-400 text-sm">
+    <option>All categories</option>
+    <option>Daily</option>
+    <option>Monthly</option>
+    <option>Yearly</option>
+  </select>
+
+  <select title="Filter by status"
+    class="w-full sm:w-1/4 px-4 py-2 rounded-md border border-green-600 bg-white text-black focus:outline-none focus:ring-2 focus:ring-green-400 text-sm">
+    <option>All statuses</option>
+    <option>Completed</option>
+    <option>Pending</option>
+    <option>Failed</option>
+  </select>
+</div>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SwiperComponent } from './swiper.component';
+import { EditExpenseComponent } from './edit-expense.component';
 
-describe('SwiperComponent', () => {
-  let component: SwiperComponent;
-  let fixture: ComponentFixture<SwiperComponent>;
+describe('EditExpenseComponent', () => {
+  let component: EditExpenseComponent;
+  let fixture: ComponentFixture<EditExpenseComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SwiperComponent]
+      imports: [EditExpenseComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SwiperComponent);
+    fixture = TestBed.createComponent(EditExpenseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
